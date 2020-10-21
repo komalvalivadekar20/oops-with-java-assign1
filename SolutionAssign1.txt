@@ -1,0 +1,261 @@
+// 7.Java program to find Total Average and percentage of Five Subjects
+package corejava;
+import java.util.Scanner;
+
+
+public class porgram7 {
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+		int english, chemistry, computers, physics, maths; 
+	    float total, Percentage, Average;
+		sc = new Scanner(System.in);
+		
+		System.out.print(" Please Enter the Five Subjects Marks : ");
+		english = sc.nextInt();	
+		chemistry = sc.nextInt();	
+		computers = sc.nextInt();	
+		physics = sc.nextInt();	
+		maths = sc.nextInt();	
+		
+		total = english + chemistry + computers + physics + maths;
+		Average = total / 5;
+	    Percentage = (total / 500) * 100;
+	    
+	    System.out.println(" Total Marks =  " + total);
+	    System.out.println(" Average Marks =  " + Average);
+	    System.out.println(" Marks Percentage =  " + Percentage);
+	}
+}
+=====================================================================================================
+//Write a program to convert temperature from Fahrenheit to Celsius. Take Fahrenheit as input using Scanner class. [ formula : C= 5*(f-32)/9 ]
+
+package corejava;
+import java .util.Scanner;
+class program10
+{
+	public static void main(String arg[])	
+	{
+	    double a,c;
+             	    Scanner sc=new Scanner(System.in);	   	 
+	    System.out.println("Enter  Fahrenheit temperature");
+                   a=sc.nextDouble(); 
+	    System.out.println("Celsius temperature is = "+celsius(a));		  	  	     
+	} 
+	static double celsius(double f)
+	{	
+	return  (f-32)*5/9;
+	}
+}
+===================================================================================
+//11.Write a program to swap two numbers without using third variable.
+package corejava;
+import java.util.*;  
+class program11   
+{  
+    public static void main(String a[])   
+    {   
+        System.out.println("Enter the value of x and y");  
+        Scanner sc = new Scanner(System.in);  
+          
+        int x = sc.nextInt();  
+        int y = sc.nextInt();  
+        System.out.println("before swapping numbers: "+x +" "+ y);  
+      
+        x = x + y;   
+        y = x - y;   
+        x = x - y;   
+        System.out.println("After swapping: "+x +"  " + y);   
+    }   
+}  
+==================================================================
+package corejava;
+import java.util.Scanner;
+public class program13
+{
+    public static void main(String[] args) 
+    {
+        int num1, num2, num3, result, temp;
+        
+        Scanner scanner = new Scanner(System.in);
+                
+    
+        System.out.println("Enter First Number:");
+        num1 = scanner.nextInt();
+        System.out.println("Enter Second Number:");
+        num2 = scanner.nextInt();
+        System.out.println("Enter Third Number:");
+        num3 = scanner.nextInt();
+        scanner.close();
+       
+        
+        
+        temp = num1>num2 ? num1:num2;
+        result = num3>temp ? num3:temp;
+        System.out.println("Largest Number is:"+result);
+    }
+}
+===============================================================================
+//14.Program to check that entered year is a leap year or not
+package corejava;
+import java.util.Scanner;
+public class program14
+{
+
+    public static void main(String[] args) {
+
+    	int year;
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("Enter any Year:");
+    	year = scan.nextInt();
+    	scan.close();
+        boolean isLeap = false;
+
+        if(year % 4 == 0)
+        {
+            if( year % 100 == 0)
+            {
+                if ( year % 400 == 0)
+                    isLeap = true;
+                else
+                    isLeap = false;
+            }
+            else
+                isLeap = true;
+        }
+        else {
+            isLeap = false;
+        }
+
+        if(isLeap==true)
+            System.out.println(year + " is a Leap Year.");
+        else
+            System.out.println(year + " is not a Leap Year.");
+    }
+}
+====================================================================================
+//02.	Write a program to declare a variable named rollNo of integer type. Assign it a value (let say 100) to it and print the following statement roll no = 100 .
+package corejava;
+
+public class program2
+{
+    public static void main (String args[])
+    {
+        System.out.println("hello java");
+    }
+}
+=================================================================================
+//04.	Write a program that initializes 2 byte type of variables. Add the values of these variables and store in a byte type of variable. [Note: primitive down casting is required in this program ] .
+package corejava;
+class Value{ int val; }
+
+class proram4 {
+    public static void main(String[] args) {
+        int i1 = 3;
+        int i2 = i1;
+        i2 = 4;
+        System.out.print("i1==" + i1);
+        System.out.println(" but i2==" + i2);
+        Value v1 = new Value();
+        v1.val = 5;
+        Value v2 = v1;
+        v2.val = 6;
+        System.out.print("v1.val==" + v1.val);
+        System.out.println(" and v2.val==" + v2.val);
+    }
+}
+=======================================================================================
+//06.	Write a program that takes radius of a circle as input. Read the entered radius using Scanner class. Then calculate and print the area and circumference of the circle.
+import java.util.Scanner;
+public class program6
+{
+    public static void main(String[] args) 
+    {
+        int r;
+        double pi = 3.14, area;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter radius of circle:");
+        r = s.nextInt();
+        area = pi * r * r;
+        System.out.println("Area of circle:"+area);
+    }            
+}
+===========================================================================================
+//08.	Write a program to find the simple interest. Take the principle amount, rate of interest and time from user using Scanner class.
+package corejava;
+import java.util.Scanner;
+public class program8
+{
+    public static void main(String args[]) 
+    {
+        float p, r, t, sinterest;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the Principal : ");
+        p = scan.nextFloat();
+        System.out.print("Enter the Rate of interest : ");
+        r = scan.nextFloat();
+        System.out.print("Enter the Time period : ");
+        t = scan.nextFloat();
+        scan.close();
+        sinterest = (p * r * t) / 100;
+        System.out.print("Simple Interest is: " +sinterest);
+    }
+}
+===================================================================================================
+//09.	Write a program to read the days (eg. 670 days) as integer value using Scanner class. Now convert the entered days into complete years, months and days and print them.
+package corejava;
+class program9
+{ 
+    static final int DAYS_IN_WEEK = 7; 
+      
+    // Function to find year, week, days 
+    static void find(int number_of_days) 
+    { 
+        int year, week, days; 
+          
+               year = number_of_days / 365; 
+        week = (number_of_days % 365) / 
+                DAYS_IN_WEEK; 
+        days = (number_of_days % 365) %  
+                DAYS_IN_WEEK; 
+          
+        System.out.println("years = " + year); 
+        System.out.println("weeks = " + week); 
+        System.out.println("days = " + days); 
+    } 
+      
+    
+    public static void main(String[] args) 
+    { 
+        int number_of_days = 200; 
+        find(number_of_days); 
+    } 
+} 
+  
+=====================================================================================
+//02.	Write a program to declare a variable named rollNo of integer type. Assign it a value (let say 100) to it and print the following statement roll no = 100 .
+package corejava;
+public class variable1
+{
+    public static void main(String args[])
+    {
+        int rollno;
+       
+        
+        rollno=49;
+        System.out.println("my rollno is:" +rollno);
+        
+    }
+}
+================================================================================================
+//01.	Write a program to print Hello World. Compile and run it using command prompt.
+package day1;
+class Hello
+{ 
+    public static void main(String args[])
+    {
+            System.out.println("Hello java");
+            
+    }
+            
+}
